@@ -12,10 +12,13 @@
         {{ form|crispy }}
         <input type="submit" name="genarate" value="Add">
     </form>
-     {% for case in cases %}
-         {{ case.patient }}
-         {{ case.descripton }}
-     {% endfor %}
+
+        <div>
+            {{ cases.patient }}
+            {{ cases.description }}
+        </div>
+
+
 
 
 
