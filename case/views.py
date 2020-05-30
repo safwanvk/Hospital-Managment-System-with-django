@@ -13,6 +13,5 @@ def add_case(request):
         if form.is_valid():
             form.save()
             return redirect('add_case')
-
-    context = {'form': form}
+    context = {'form': form, 'cases': cases}
     return render(request, 'case/addcase.html', context)

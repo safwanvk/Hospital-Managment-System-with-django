@@ -7,18 +7,16 @@
     <title>Add Case</title>
 </head>
 <body>
-    <form method="POST" action="">
+    <form method="POST">
+        {% csrf_token %}
         {{ form|crispy }}
         <input type="submit" name="genarate" value="Add">
     </form>
+     {% for case in cases %}
+         {{ case.patient }}
+         {{ case.descripton }}
+     {% endfor %}
 
-    {% for case in cases %}
-      {{ case.patient }}
-      {{ case.receptionist }}
-      {{ case.description }}
-      {{ case.filed_date }}
-
-    {% endfor %}
 
 
 
