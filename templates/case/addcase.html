@@ -1,3 +1,5 @@
+{% load crispy_forms_filters %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,12 @@
     <title>Add Case</title>
 </head>
 <body>
+    <form method="POST" action="">
+        {{ form|crispy }}
+        <input type="submit" name="genarate" value="Add">
+
+    </form>
+
 
 </body>
 </html>
