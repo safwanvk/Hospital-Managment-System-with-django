@@ -4,5 +4,6 @@ from case import views
 
 urlpatterns = [
 
-    path('add_case/', views.add_case, name='add_case')
+
+    path('details/', views.Case_details_view, name='add_case')
 ]
